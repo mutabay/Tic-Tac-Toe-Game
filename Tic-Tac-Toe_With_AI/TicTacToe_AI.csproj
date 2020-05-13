@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4F277443-8CA6-49DF-AA4B-07D575D197C2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Tic_Tac_Toe_With_AI</RootNamespace>
-    <AssemblyName>Tic-Tac-Toe_With_AI</AssemblyName>
+    <RootNamespace>TicTacToe_AI</RootNamespace>
+    <AssemblyName>TicTacToe_AI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,23 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="..\..\..\..\..\Documents\MainForm.cs">
       <SubType>Form</SubType>
+      <Link>MainForm.cs</Link>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="..\..\..\..\..\Documents\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <Link>MainForm.Designer.cs</Link>
     </Compile>
+    <Compile Include="Board.cs" />
+    <Compile Include="ComputerLogic.cs" />
+    <Compile Include="GameDifficulty.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Properties\Resourcesabc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resourcesabc.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TokenType.cs" />
+    <EmbeddedResource Include="..\..\..\..\..\Documents\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <Link>MainForm.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Properties\Resourcesabc.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resourcesabc.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +105,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ccfd2d6135d21bb634a410cc4a4bd580.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33398.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FreeVectorAbstractWhitePattern.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
